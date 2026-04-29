@@ -1,0 +1,11 @@
+@startuml
+interface CatalogoBiblioteca {
+    + buscarLibro(isbn: String): Libro
+}
+
+class CatalogoAdapter
+class CatalogoCETYSServicio
+
+CatalogoBiblioteca <|.. CatalogoAdapter
+CatalogoAdapter --> CatalogoCETYSServicio
+@enduml

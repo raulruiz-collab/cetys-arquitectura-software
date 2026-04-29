@@ -1,0 +1,21 @@
+@startuml
+interface Usuario {
+    + mostrarRol(): void
+}
+
+class Estudiante
+class Bibliotecario
+class Admin
+class Posgrado
+
+Usuario <|.. Estudiante
+Usuario <|.. Bibliotecario
+Usuario <|.. Admin
+Usuario <|.. Posgrado
+
+class FabricaDeUsuarios {
+    + crearUsuario(tipo: String): Usuario
+}
+
+FabricaDeUsuarios ..> Usuario
+@enduml

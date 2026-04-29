@@ -1,0 +1,8 @@
+@startuml
+class AuditoriaLogger {
+    - instancia: AuditoriaLogger
+    - AuditoriaLogger()
+    + getInstance(): AuditoriaLogger
+    + registrar(evento: String, usuario: String): void
+}
+@enduml
